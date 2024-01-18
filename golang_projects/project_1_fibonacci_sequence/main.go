@@ -12,6 +12,7 @@ func main() {
 		partialSequence, err := handlers.AppInteraction(&seq)
 		if err != nil {
 			fmt.Println(err.Error())
+			continue
 		}
 		fmt.Printf("The element you're looking for is %d\n", partialSequence)
 	}
