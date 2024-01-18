@@ -17,6 +17,10 @@ func (s *Sequence) FibonacciPartialSequence(initialPosition, finalPosition int) 
 	if finalPosition > len(*s) {
 		s.fibonacciSequenceIncrement(finalPosition)
 	}
+	if initialPosition > len(*s) {
+		s.fibonacciSequenceIncrement(initialPosition)
+		return (*s)[initialPosition-1:]
+	}
 	return (*s)[initialPosition-1 : finalPosition]
 }
 

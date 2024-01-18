@@ -1,17 +1,38 @@
 # 100 Days Of Code Golang - Log
 
 ### Day 1: January 17, 2024
-##### (delete me or comment me out)
 
-**Today's Progress**: Criei a aplicação da sequência de Fibonacci que retorna a posição na sequência que o usuário passou via terminal.
+**Today's Progress**: 
+
+Criei a aplicação da sequência de Fibonacci que retorna a posição na sequência que o usuário passou via terminal.
 
 **Thoughts:** 
 
 * Eu usei como base a estruturação de métodos vinculados a o objeto slice que conterá os elementos da sequência.
-
 * Está implementado o método que retornará o elemento da posição requisitada pelo usuário, mas, caso ela ainda não exista, é chamado outro método que criará os novos elementos e fará a atualização  do slice.
-
 * Não mexi em filtros que possam evitar da aplicação quebrar, como por exemplo o usuário passar valores diferentes de números inteiros maiores ou iguais a que 1
+
+### Day 2: January 18, 2024
+
+**Today's Progress**: 
+
+* Criei uma UI (User Interface) básica que o usuário irá escolher o que o código fará para ele:
+
+        1 - One element of the Fibonacci's Sequence
+        2 - A selected interval of the Fibonacci's Sequence
+        3 - Print the entire sequence stored
+        0 - Exit application
+
+* Refatoração de métodos do package fibonacci.
+* Implementação de filtros para não quebrar a aplicação.
+* Implementação de método que retorna slice da sequência total armazenada em memória.
+
+**Thoughts:**
+
+* Aprendi um pouco sobre Scanf e Scanln. A escolha de Scanln é a melhor, pois há interferência de input entre as ações.
+* Aprendi mais sobre métodos, atribuição de valores a ponteiros
+* Enfrentei problemas de import cycle tentando fazer link de pkg fibonacci para handlers e de pkg handlers para fibonacci.
+* Ainda não sei se é possível testar aplicações que recebem input de usuário.
 
 <!--- 
 **Link to work:** [Calculator App](http://www.example.com)
