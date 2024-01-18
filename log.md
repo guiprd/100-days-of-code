@@ -33,7 +33,8 @@ Criei a aplicação da sequência de Fibonacci que retorna a posição na sequê
 * Aprendi mais sobre métodos, atribuição de valores a ponteiros
 * Enfrentei problemas de import cycle tentando fazer link de pkg fibonacci para handlers e de pkg handlers para fibonacci.
 * Ainda não sei se é possível testar aplicações que recebem input de usuário.
-
+* Modifiquei o código para tentar mockar um método que faz o Scanln, mas sem sucesso. Com isso, percebi que não entendo direito o processo de mock.
+* Dado a falha de mock, preciso colocar no backlog o estudo do mesmo.
 <!--- 
 **Link to work:** [Calculator App](http://www.example.com)
 

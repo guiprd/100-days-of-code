@@ -1,6 +1,8 @@
 package handlers
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestPositions_InputHandler(t *testing.T) {
 	type fields struct {
@@ -32,6 +34,14 @@ func TestPositions_InputHandler(t *testing.T) {
 			name: "Invalid input with final position negative",
 			fields: fields{
 				InitialPosition: 5,
+				FinalPosition:   -1,
+			},
+			wantErr: true,
+		},
+		{
+			name: "Invalid input with initial position negative",
+			fields: fields{
+				InitialPosition: -1,
 				FinalPosition:   -1,
 			},
 			wantErr: true,
