@@ -1,18 +1,19 @@
 package main
 
 import (
-	fib "fibonacci_sequence/fibonacci"
+	"fibonacci_sequence/fibonacci"
+	"fibonacci_sequence/handlers"
 	"fmt"
 )
 
 func main() {
-	seq := fib.SequenceInitializer()
-	fmt.Println("Which element of the Fibonacci Sequence would you like to be returned? ")
-	var inputPosition int
-	_, err := fmt.Scanf("%d", &inputPosition)
-	if err != nil {
-		panic(err.Error())
+	seq := fibonacci.SequenceInitializer()
+	for {
+		partialSequence, err := handlers.AppInteraction(&seq)
+		if err != nil {
+			fmt.Println(err.Error())
+		}
+		fmt.Printf("The element you're looking for is %d\n", partialSequence)
 	}
-	element := seq.FibonacciElement(inputPosition)
-	fmt.Printf("The element you're looking for is %d\n", element)
+
 }
